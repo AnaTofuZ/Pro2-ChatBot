@@ -68,7 +68,7 @@ __END__
 
 =head1 ABOUT
 
-プロ2の課題 L<https://github.com/naltoma/java_intro/blob/master/report/report2_chatbot2/report2_intellij.md|チャットボット初号機拡張> な課題のPerl実装
+プロ2の課題 L<チャットボット初号機拡張|https://github.com/naltoma/java_intro/blob/master/report/report2_chatbot2/report2_intellij.md> な課題のPerl実装
 クラスは特にモジュールを使わずに素朴に実装してみた．
 
 =head1 NAME
