@@ -47,13 +47,13 @@ sub searchPattern {
 sub greeting {
     my $self = shift @_;
     my $index = $self->searchPattern("greeting");
-    print encode_utf8("$self->{botname} 「" .$self->{patterns}->[$index]->reply ." 」\n");
+    print encode_utf8("$self->{botname} 「" .$self->{patterns}->[$index]->reply() ." 」\n");
 }
 
 sub reply {
     my ($self,$pattern) = @_;
     my $index = $self->searchPattern($pattern);
-    my $message = "$self->{botname} 「 ".$self->{patterns}->[$index]->reply. " 」\n";
+    my $message = "$self->{botname} 「 ".$self->{patterns}->[$index]->reply(). " 」\n";
     return $message;
 }
 
@@ -65,6 +65,11 @@ __END__
 =head1 Ppo2PerlScript
 
     perl -Ilib examples/main.pl
+
+=head1 ABOUT
+
+プロ2の課題 L<https://github.com/naltoma/java_intro/blob/master/report/report2_chatbot2/report2_intellij.md|チャットボット初号機拡張> な課題のPerl実装
+クラスは特にモジュールを使わずに素朴に実装してみた．
 
 =head1 NAME
 

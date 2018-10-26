@@ -52,6 +52,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/AnaTofuZ/Pro2-ChatBot-Perl/issues"
+      },
+      "homepage" : "https://github.com/AnaTofuZ/Pro2-ChatBot-Perl",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/AnaTofuZ/Pro2-ChatBot-Perl.git",
+         "web" : "https://github.com/AnaTofuZ/Pro2-ChatBot-Perl"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:ANATOFUZ",
    "x_serialization_backend" : "JSON::PP version 2.27400_02",
