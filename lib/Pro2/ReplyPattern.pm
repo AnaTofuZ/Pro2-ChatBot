@@ -27,6 +27,15 @@ sub equals {
 }
 
 
+sub reply {
+    my $self = shift;
+    if (@_){
+        $self->{reply} = shift;
+    }
+    return $self->{reply};
+}
+
+
 1;
 __END__
 
