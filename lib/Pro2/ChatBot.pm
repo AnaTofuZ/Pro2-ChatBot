@@ -27,7 +27,7 @@ sub new {
 sub searchPattern {
     my ($self,$pattern) = @_;
 
-    for my $i (0..(@{$self->{patterns}} -1)){
+    for (my $i = 0; $i < @{$self->{patterns}}; $i++){
         if ($pattern eq $self->{patterns}->[$i]->{pattern}){
             return $i;
         }
