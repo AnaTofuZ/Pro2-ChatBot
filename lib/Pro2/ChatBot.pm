@@ -35,7 +35,11 @@ sub searchPattern {
         }
     }
 
-    map { if ($self->{patterns}->[$_]->equals("other")){ retrun $_;}} (0..(@{$self->{patterns}}-1));
+    for (my $i = 0; $i < @{$self->{patterns}}; $i++){
+        if ($self->{patterns}->[$i]->equals("other")){
+            return $i;
+        }
+    }
 
     return -1;
 }
@@ -43,13 +47,13 @@ sub searchPattern {
 sub greeting {
     my $self = shift @_;
     my $index = $self->searchPattern("greeting");
-    print encode_utf8("$self->{botname} 「 $self->{patterns}->[$index]->{reply} 」\n");
+    print encode_utf8("$self->{botname} 「" .$self->{patterns}->[$index]->reply ." 」\n");
 }
 
 sub reply {
     my ($self,$pattern) = @_;
     my $index = $self->searchPattern($pattern);
-    my $message = "$self->{botname} 「 $self->{patterns}->[$index]->{reply} 」\n";
+    my $message = "$self->{botname} 「 ".$self->{patterns}->[$index]->reply. " 」\n";
     return $message;
 }
 
