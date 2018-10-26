@@ -58,6 +58,10 @@ __END__
 
 =encoding utf-8
 
+=head1 Ppo2PerlScript
+
+    perl -Ilib examples/main.pl
+
 =head1 NAME
 
 Pro2::ChatBot - It's new $module

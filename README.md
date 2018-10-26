@@ -1,3 +1,7 @@
+# Ppo2PerlScript
+
+    perl -Ilib examples/main.pl
+
 # NAME
 
 Pro2::ChatBot - It's new $module
