@@ -30,12 +30,12 @@ sub searchPattern {
     my ($self,$pattern) = @_;
 
     for (my $i = 0; $i < @{$self->{patterns}}; $i++){
-        if ($pattern eq $self->{patterns}->[$i]->{pattern}){
+        if ($self->{patterns}->[$i]->equals($pattern)){
             return $i;
         }
     }
 
-    map { if ("other" eq $self->{patterns}->[$_]->{pattern}){ retrun $_;}} (0..(@{$self->{patterns}}-1));
+    map { if ($self->{patterns}->[$_]->equals("other")){ retrun $_;}} (0..(@{$self->{patterns}}-1));
 
     return -1;
 }
