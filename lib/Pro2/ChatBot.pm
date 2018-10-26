@@ -3,6 +3,8 @@ use 5.008001;
 use strict;
 use warnings;
 use Pro2::ReplyPattern;
+use utf8;
+use Encode;
 
 our $VERSION = "0.01";
 
@@ -41,7 +43,7 @@ sub searchPattern {
 sub greeting {
     my $self = shift @_;
     my $index = $self->searchPattern("greeting");
-    print ("$self->{botname} 「 $self->{patterns}->[$index]->{reply} 」\n");
+    print encode_utf8("$self->{botname} 「 $self->{patterns}->[$index]->{reply} 」\n");
 }
 
 sub reply {
