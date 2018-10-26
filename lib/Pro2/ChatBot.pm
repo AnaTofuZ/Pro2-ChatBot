@@ -15,7 +15,7 @@ sub new {
     $args{dataset} || die 'unko';
 
     for my $data (@{$args{dataset}}){
-            my($pattern,$reply) = split /"\t"/,$data;
+            my($pattern,$reply) = split /\t/,$data;
             push @patterns, Pro2::ReplyPattern->new(pattern => $pattern,reply => $reply);
         }
 
@@ -27,13 +27,13 @@ sub new {
 sub searchPattern {
     my ($self,$pattern) = @_;
 
-    for my $i (0..@{$self->{patterns}}){
-        if ($pattern eq $self->{patterns}[$i]){
+    for my $i (0..(@{$self->{patterns}} -1)){
+        if ($pattern eq $self->{patterns}->[$i]->{pattern}){
             return $i;
         }
     }
 
-    map { if ("other" eq $self->{patterns}[$_]){ retrun $i;}} (0..@{$self->{patterns}});
+    map { if ("other" eq $self->{patterns}->[$_]->{pattern}){ retrun $_;}} (0..(@{$self->{patterns}}-1));
 
     return -1;
 }

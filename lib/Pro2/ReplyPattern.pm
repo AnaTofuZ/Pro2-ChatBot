@@ -9,7 +9,7 @@ sub new {
     my ($class,%args) = @_;
 
     my $self = {};
-    $self->{psttern} = $args{pattern} or die 'please input botname';
+    $self->{pattern} = $args{pattern} or die 'please input botname';
     $self->{reply} = $args{reply} or die 'please input patterns';
 
     return bless $self,$class;
