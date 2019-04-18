@@ -9,7 +9,7 @@
 
 # NAME
 
-Pro2::ChatBot - It's new $module
+Pro2::ChatBot
 
 # SYNOPSIS
 
