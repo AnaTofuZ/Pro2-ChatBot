@@ -17,7 +17,7 @@ Pro2::ChatBot
 
 # DESCRIPTION
 
-Pro2::ChatBot is ...
+Pro2::ChatBot is test program.
 
 # LICENSE
 
